@@ -178,7 +178,7 @@
       text-transform: uppercase;
       letter-spacing:.6px;
       font-size: clamp(34px, 5.6vw, 84px);
-      line-height: 1.02;
+      line-height: 1.20;
     }
     .bill .hl{
       color:#111;

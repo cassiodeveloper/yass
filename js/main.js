@@ -1,29 +1,28 @@
-// --- i18n + Statements (EN/PT) ---
 const copy = {
     en: {
-    nav: ["concept","statements","companies","organizers","bring it"],
+    nav: ["concept","statements","for companies","for events","I want it"],
 
     kicker: "A PUBLIC CHALLENGE ABOUT APPLICATION SECURITY",
-    hero_sub: "A debate-first format designed to provoke engineers into real security conversations. Minimal setup. Maximum signal.",
-    cta_primary: "Bring it",
+    hero_sub: "A debate format designed to provoke companies, teams, and individuals to talk about real security. Minimal setup. <s>Potential</s> for maximum conflict.",
+    cta_primary: "I want it",
     cta_secondary: "See statements",
     hero_note: "No slides. No rehearsed answers. Always a practical takeaway.",
 
-    bb1_title: "I accuse your security of being <span class='hl'>mostly compliance</span>.",
-    bb1_sub: "Sit down. Argue it. I’ll close with decisions you can ship, not “best practices” you’ll forget.",
+    bb1_title: "I affirm that your AppSec (if you have it) is <span class='hl'>mostly compliance</span>.",
+    bb1_sub: "Sit down. Debate with me. I guarantee you'll come out better than you came in.",
 
     what_kicker: "THE CONCEPT",
-    what_title: "Not a talk. A <span class='hl'>public challenge</span>.",
-    what_body: "I place a provocative statement in the room. People react. We debate with code, architecture and production constraints. Every round ends with a concrete takeaway: a pattern, a guardrail, or a decision you can implement.",
+    what_title: "Not a talk or presentation. A <span class='hl'>public challenge</span>.",
+    what_body: "I put a provocative phrase in the environment. People react. We debate using reality, without slides, without lies, just with code, architecture, and processes. Each round ends with a concrete takeaway: a pattern, a guardrail, or an implementable decision.",
 
-    rules_title: "3 rules",
+    rules_title: "3 basic rules",
     r1: "1) No moral lectures.",
     r2: "2) No vague “best practices”.",
     r3: "3) Every debate ends with an actionable decision.",
     r4: "Technical debate. Respect. Code of conduct.",
     r5: "If you ship software, you’re qualified to join.",
 
-    bb2_title: "Your “secure design” fails at the <span class='hl'>first attacker</span>.",
+    bb2_title: "Your supposed “secure design” fails on the <span class='hl'>first attack</span>.",
     bb2_sub: "Let’s test assumptions in public. Faster than a month of internal meetings.",
 
     st_kicker: "STATEMENTS",
@@ -35,20 +34,20 @@ const copy = {
     st_next: "next",
     st_hint: "Use this on a banner, on stage, or as a hallway debate starter.",
 
-    bb3_title: "If it’s not in your design, it won’t appear in your patch.",
-    bb3_sub: "Security is decided before the first line of code. Let’s argue what you’re missing.",
+    bb3_title: "If the raw material for the software is poor, the final product will also be poor.",
+    bb3_sub: "Security is decided before the first line of code. Let's discuss what's missing.",
 
     co_kicker: "FOR COMPANIES",
-    co_title: "Turn security theater into <span class='hl'>engineering decisions</span>.",
+    co_title: "Transform your security theater into <span class='hl'>real security</span>.",
     co_body: "Works as consulting because it exposes blind spots fast, aligns dev and security, and produces an action plan. You leave with decisions teams can implement.",
     co_panel: "What you get",
     co_l1: "Prioritized risky assumptions tied to code paths, services and workflows.",
     co_l2: "Guardrails: patterns, checklists and “never again” rules teams actually follow.",
     co_l3: "Action plan: quick wins + structural fixes (people, process, pipeline, design).",
 
-    ev_kicker: "FOR EVENT ORGANIZERS",
+    ev_kicker: "FOR EVENTS",
     ev_title: "An attraction that creates a crowd and <span class='hl'>real technical conversation</span>.",
-    ev_body: "Designed for conference floors and dev meetups. High engagement, low production cost, and great content moments.",
+    ev_body: "Designed for events, conferences and meetups. High engagement, low production cost, and great content moments.",
     ev_panel: "Setup (minimal)",
     ev_l1: "<b>Table:</b> 2 chairs + small table + banner/sign + timer. Mic optional.",
     ev_l2: "<b>Stage:</b> host mic + 2 participant mics + one slide with the statement.",
@@ -56,16 +55,16 @@ const copy = {
     ev_l4: "<b>Rules:</b> technical debate + respect + code of conduct.",
 
     fin_company_tag: "COMPANY",
-    fin_company_head: "Bring it inside.",
+    fin_company_head: "Bring it inside home.",
     fin_company_desc: "Run a high-impact internal session. Expose blind spots. Align teams. Leave with an action plan.",
-    fin_company_btn: "Email about a company session",
+    fin_company_btn: "I want it in my company",
 
     fin_event_tag: "EVENT",
     fin_event_head: "Bring it on stage.",
     fin_event_desc: "Table or stage format. Creates a crowd. Sparks debate. Generates content moments.",
-    fin_event_btn: "Email about bringing it to an event",
+    fin_event_btn: "I want it in my event",
 
-    ft_note: "Billboards, statements, split CTA. Minimal by design.",
+    ft_note: "All rights reserved. By <a target='_blank' title='Cássio B. Pereira' href='https://cassiodeveloper.com.br'>@cassiodeveloper</a>",
 
     statements: [
         "Your security is <span class='hl'>just compliance</span>.",
@@ -80,29 +79,29 @@ const copy = {
     },
 
     pt: {
-    nav: ["conceito","frases","empresas","organizadores","trazer"],
+    nav: ["conceito","frases","para empresas","para eventos","eu quero"],
 
     kicker: "UM DESAFIO PÚBLICO SOBRE APPLICATION SECURITY",
-    hero_sub: "Um formato de debate feito para provocar engenheiros a conversar sobre segurança de verdade. Setup mínimo. Sinal máximo.",
-    cta_primary: "Quero levar",
+    hero_sub: "Um formato de debate feito para provocar empresas, times e individuos a conversar sobre segurança de verdade. Setup mínimo. <s>Possível</s> treta máxima.",
+    cta_primary: "Eu quero!",
     cta_secondary: "Ver frases",
-    hero_note: "Sem slides. Sem resposta ensaiada. Sempre com takeaway prático.",
+    hero_note: "Sem slides. Sem resposta ensaiada. Só a experiência e o diálogo.",
 
-    bb1_title: "Eu acuso sua segurança de ser <span class='hl'>só compliance</span>.",
-    bb1_sub: "Senta. Debate. Eu fecho com decisões que você consegue levar pro time, não “boas práticas” esquecíveis.",
+    bb1_title: "Eu afirmo que o seu AppSec (se tiver) é <span class='hl'>só compliance</span>.",
+    bb1_sub: "Senta. Debate comigo. Eu garanto que você sairá melhor do que entrou.",
 
     what_kicker: "O CONCEITO",
     what_title: "Não é palestra. É um <span class='hl'>desafio público</span>.",
-    what_body: "Eu coloco uma frase provocativa no ambiente. As pessoas reagem. A gente debate com código, arquitetura e restrições de produção. Cada rodada termina com um takeaway concreto: um padrão, um guardrail ou uma decisão implementável.",
+    what_body: "Eu coloco uma frase provocativa no ambiente. As pessoas reagem. A gente debate usando a realidade, sem slides, sem mentiras apenas com código, arquitetura e processos. Cada rodada termina com um takeaway concreto: um padrão, um guardrail ou uma decisão implementável.",
 
-    rules_title: "3 regras",
+    rules_title: "3 regras básicas",
     r1: "1) Sem sermão moral.",
     r2: "2) Sem “melhores práticas” vagas.",
     r3: "3) Todo debate termina com decisão acionável.",
     r4: "Debate técnico. Respeito. Código de conduta.",
     r5: "Se você entrega software, você está qualificado para entrar.",
 
-    bb2_title: "Seu “design seguro” falha no <span class='hl'>primeiro atacante</span>.",
+    bb2_title: "Seu suposto “design seguro” falha no <span class='hl'>primeiro ataque</span>.",
     bb2_sub: "Vamos testar suposições em público. Mais rápido que um mês de reunião interna.",
 
     st_kicker: "FRASES",
@@ -114,11 +113,11 @@ const copy = {
     st_next: "próxima",
     st_hint: "Use no banner, no palco ou como starter de debate no corredor.",
 
-    bb3_title: "Se não está no design, não vai aparecer no patch.",
+    bb3_title: "Se a matéria prima do software é ruim, o produto final também é ruim.",
     bb3_sub: "Segurança é decidida antes da primeira linha de código. Vamos discutir o que está faltando.",
 
     co_kicker: "PARA EMPRESAS",
-    co_title: "Transforme teatro de segurança em <span class='hl'>decisão de engenharia</span>.",
+    co_title: "Transforme o seu teatro de segurança em <span class='hl'>segurança real</span>.",
     co_body: "Funciona como consultoria porque expõe ponto cego rápido, alinha dev e segurança e produz um plano de ação. Você sai com decisões implementáveis.",
     co_panel: "O que você recebe",
     co_l1: "Suposições arriscadas priorizadas ligadas a caminhos de código, serviços e fluxos.",
@@ -127,7 +126,7 @@ const copy = {
 
     ev_kicker: "PARA ORGANIZADORES",
     ev_title: "Uma atração que cria fila e gera <span class='hl'>conversa técnica de verdade</span>.",
-    ev_body: "Feito pra conferências e meetups dev. Alto engajamento, baixo custo de produção e bons momentos de conteúdo.",
+    ev_body: "Feito pra eventos, conferências e meetups. Alto engajamento, baixo custo de produção e bons momentos de conteúdo.",
     ev_panel: "Setup (mínimo)",
     ev_l1: "<b>Mesa:</b> 2 cadeiras + mesa pequena + banner/placa + timer. Microfone opcional.",
     ev_l2: "<b>Palco:</b> mic do host + 2 mics de participantes + um slide com a frase.",
@@ -135,21 +134,21 @@ const copy = {
     ev_l4: "<b>Regras:</b> debate técnico + respeito + código de conduta.",
 
     fin_company_tag: "EMPRESA",
-    fin_company_head: "Leve pra dentro.",
+    fin_company_head: "Leve pra dentro de casa.",
     fin_company_desc: "Rode uma sessão interna de alto impacto. Exponha pontos cegos. Alinhe times. Saia com plano de ação.",
-    fin_company_btn: "Email sobre sessão na empresa",
+    fin_company_btn: "Quero na minha empresa",
 
     fin_event_tag: "EVENTO",
     fin_event_head: "Leve pro palco.",
     fin_event_desc: "Formato mesa ou palco. Cria fila. Puxa debate. Gera momentos de conteúdo.",
-    fin_event_btn: "Email para levar ao evento",
+    fin_event_btn: "Quero no meu evento",
 
-    ft_note: "Outdoors, frases rotativas, CTA dividido. Minimalista por escolha.",
+    ft_note: "Todos os direitos reservados. By <a target='_blank' title='Cássio B. Pereira' href='https://cassiodeveloper.com.br'>@cassiodeveloper</a>",
 
     statements: [
-        "Sua segurança é <span class='hl'>só compliance</span>.",
+        "Seu AppSec é <span class='hl'>só compliance</span>.",
         "Seu AppSec é <span class='hl'>teatro de segurança</span>.",
-        "Passou no CI? Ainda <span class='hl'>não é seguro</span>.",
+        "Tudo verde no CI? Ainda <span class='hl'>não é seguro</span>.",
         "Seu controle de acesso é <span class='hl'>fé</span>.",
         "“API interna” é <span class='hl'>mito</span>.",
         "Sua estratégia de secrets é <span class='hl'>pânico</span>.",
