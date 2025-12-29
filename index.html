@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="YOUR APPSEC SUCKS! A public challenge about Application Security. Bring it to your company or your event." />
+  <title>YASS | You AppSec Sucks!</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar full">
+    <div class="row">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <span>YOUR APPSEC SUCKS!</span>
+      </div>
+
+      <div class="nav" aria-label="Navigation">
+        <a href="#concept" class="anchorLink">concept</a>
+        <a href="#statements" class="anchorLink">statements</a>
+        <a href="#companies" class="anchorLink">companies</a>
+        <a href="#organizers" class="anchorLink">organizers</a>
+        <a href="#final" class="anchorLink">bring it</a>
+
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button id="btnEN" type="button" aria-pressed="true">EN</button>
+          <button id="btnPT" type="button" aria-pressed="false">PT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="full" style="padding-top:64px">
+    <div class="container">
+      <div class="kicker" data-i18n="kicker">A PUBLIC CHALLENGE ABOUT APPLICATION SECURITY</div>
+      <h1 class="title">YOUR APPSEC SUCKS!</h1>
+      <div class="subtitle" data-i18n="hero_sub">
+        A debate-first format designed to provoke engineers into real security conversations. Minimal setup. Maximum signal.
+      </div>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="#final" data-i18n="cta_primary">Bring it</a>
+        <a class="btn" href="#statements" data-i18n="cta_secondary">See statements</a>
+      </div>
+
+      <div class="note" data-i18n="hero_note">No slides. No rehearsed answers. Always a practical takeaway.</div>
+    </div>
+  </section>
+
+  <!-- BILLBOARD 1 -->
+  <section id="concept" class="billboard full anchor">
+    <div class="inner">
+      <p class="bill" data-i18n="bb1_title">
+        I accuse your security of being <span class="hl">mostly compliance</span>.
+      </p>
+      <p class="billSub" data-i18n="bb1_sub">
+        Sit down. Argue it. I’ll close with decisions you can ship, not “best practices” you’ll forget.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONCEPT DETAILS -->
+  <section class="alt full">
+    <div class="container split">
+      <div>
+        <div class="kicker" data-i18n="what_kicker">THE CONCEPT</div>
+        <p class="bill" style="text-align:left; font-size:clamp(28px,4.4vw,56px)" data-i18n="what_title">
+          Not a talk. A <span class="hl">public challenge</span>.
+        </p>
+        <p class="subtitle" style="max-width:70ch" data-i18n="what_body">
+          I place a provocative statement in the room. People react. We debate with code, architecture and production constraints.
+          Every round ends with a concrete takeaway: a pattern, a guardrail, or a decision you can implement.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="rules_title">3 rules</h3>
+        <div class="p" data-i18n="r1">1) No moral lectures.</div>
+        <div class="p" data-i18n="r2">2) No vague “best practices”.</div>
+        <div class="p" data-i18n="r3">3) Every debate ends with an actionable decision.</div>
+        <ul class="list">
+          <li data-i18n="r4">Technical debate. Respect. Code of conduct.</li>
+          <li data-i18n="r5">If you ship software, you’re qualified to join.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BILLBOARD 2 -->
+  <section class="billboard full">
+    <div class="inner">
+      <p class="bill" data-i18n="bb2_title">
+        Your “secure design” fails at the <span class="hl">first attacker</span>.
+      </p>
+      <p class="billSub" data-i18n="bb2_sub">
+        Let’s test assumptions in public. Faster than a month of internal meetings.
+      </p>
+    </div>
+  </section>
+
+  <!-- STATEMENTS -->
+  <section id="statements" class="full anchor">
+    <div class="container">
+      <div class="kicker" data-i18n="st_kicker">STATEMENTS</div>
+      <p class="bill" style="text-align:left; font-size:clamp(28px,4.4vw,56px)" data-i18n="st_title">
+        Pick one. Get triggered. <span class="hl">Debate.</span>
+      </p>
+      <p class="subtitle" data-i18n="st_sub">
+        These are the “sign on the table” starters. Shuffle for the next round.
+      </p>
+
+      <div class="statWrap" style="margin-top:22px">
+        <div class="statTop">
+          <div class="label" data-i18n="st_label">now challenging</div>
+          <div class="actions">
+            <button class="chip" id="shuffleBtn" type="button" data-i18n="st_shuffle">shuffle</button>
+            <button class="chip" id="prevBtn" type="button" data-i18n="st_prev">prev</button>
+            <button class="chip" id="nextBtn" type="button" data-i18n="st_next">next</button>
+            <span class="chip" id="counter">1/8</span>
+          </div>
+        </div>
+
+        <div class="statBody">
+          <p class="statement" id="statementText"></p>
+          <p class="statHint" data-i18n="st_hint">
+            Use this on a banner, on stage, or as a hallway debate starter.
+          </p>
+        </div>
+
+        <div class="dots" id="dots" aria-label="statement index"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BILLBOARD 3 -->
+  <section class="billboard full">
+    <div class="inner">
+      <p class="bill" data-i18n="bb3_title">
+        If it’s not in your design, it won’t appear in your patch.
+      </p>
+      <p class="billSub" data-i18n="bb3_sub">
+        Security is decided before the first line of code. Let’s argue what you’re missing.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPANIES -->
+  <section id="companies" class="alt full anchor">
+    <div class="container split">
+      <div>
+        <div class="kicker" data-i18n="co_kicker">FOR COMPANIES</div>
+        <p class="bill" style="text-align:left; font-size:clamp(28px,4.4vw,56px)" data-i18n="co_title">
+          Turn security theater into <span class="hl">engineering decisions</span>.
+        </p>
+        <p class="subtitle" data-i18n="co_body">
+          Works as consulting because it exposes blind spots fast, aligns dev and security, and produces an action plan.
+          You leave with decisions teams can implement.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="co_panel">What you get</h3>
+        <ul class="list">
+          <li data-i18n="co_l1">Prioritized risky assumptions tied to code paths, services and workflows.</li>
+          <li data-i18n="co_l2">Guardrails: patterns, checklists and “never again” rules teams actually follow.</li>
+          <li data-i18n="co_l3">Action plan: quick wins + structural fixes (people, process, pipeline, design).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZERS -->
+  <section id="organizers" class="full anchor">
+    <div class="container split">
+      <div>
+        <div class="kicker" data-i18n="ev_kicker">FOR EVENT ORGANIZERS</div>
+        <p class="bill" style="text-align:left; font-size:clamp(28px,4.4vw,56px)" data-i18n="ev_title">
+          An attraction that creates a crowd and <span class="hl">real technical conversation</span>.
+        </p>
+        <p class="subtitle" data-i18n="ev_body">
+          Designed for conference floors and dev meetups. High engagement, low production cost, and great content moments.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="ev_panel">Setup (minimal)</h3>
+        <ul class="list">
+          <li data-i18n="ev_l1"><b>Table:</b> 2 chairs + small table + banner/sign + timer. Mic optional.</li>
+          <li data-i18n="ev_l2"><b>Stage:</b> host mic + 2 participant mics + one slide with the statement.</li>
+          <li data-i18n="ev_l3"><b>Time:</b> 30–45 min (stage) or 2–4 hours (table, rotating debates).</li>
+          <li data-i18n="ev_l4"><b>Rules:</b> technical debate + respect + code of conduct.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL SPLIT CTA -->
+  <section id="final" class="full anchor" style="padding:0">
+    <div class="finalSplit">
+      <div class="bigCTA company">
+        <div class="inner">
+          <div class="tag" data-i18n="fin_company_tag">COMPANY</div>
+          <div class="head" data-i18n="fin_company_head">Bring it inside.</div>
+          <div class="desc" data-i18n="fin_company_desc">
+            Run a high-impact internal session. Expose blind spots. Align teams. Leave with an action plan.
+          </div>
+          <a class="go" href="mailto:cassio@cassiobp.com.br?subject=Your%20AppSec%20Sucks!%20%E2%80%93%20Company" data-i18n="fin_company_btn">Email about a company session</a>
+        </div>
+      </div>
+
+      <div class="bigCTA event">
+        <div class="inner">
+          <div class="tag" data-i18n="fin_event_tag">EVENT</div>
+          <div class="head" data-i18n="fin_event_head">Bring it on stage.</div>
+          <div class="desc" data-i18n="fin_event_desc">
+            Table or stage format. Creates a crowd. Sparks debate. Generates content moments.
+          </div>
+          <a class="go" href="mailto:cassio@cassiobp.com.br?subject=Your%20AppSec%20Sucks!%20%E2%80%93%20Event" data-i18n="fin_event_btn">Email about bringing it to an event</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="full">
+    <div class="container">
+      <div>YOUR APPSEC SUCKS! <span class="muted">©</span></div>
+      <div class="muted" data-i18n="ft_note">Billboards, statements, split CTA. Minimal by design.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
