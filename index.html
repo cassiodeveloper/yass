@@ -297,14 +297,14 @@
     </div>
   </section>
 
-  <section class="ladder-next" aria-label="What comes next">
+  <section class="ladder-next" aria-label="next">
   <div class="ladder-next__inner">
-    <p class="ladder-next__kicker">What comes next</p>
+    <p class="ladder-next__kicker" data-pt="Próximo passo" data-en="What comes next">What comes next</p>
     <div class="ladder-next__cards">
       <a class="ladder-next__card ladder-next__card--primary" href="https://cassiodeveloper.com.br/appsec-nightmare/" data-ladder-from="diagnostico" data-ladder-to="intervencao">
-        <span class="ladder-next__title">AppSec Nightmare</span>
-        <span class="ladder-next__reason">You know it hurts. Three days of autopsy, confrontation and fixes in your pipeline.</span>
-        <span class="ladder-next__go">See the intervention &rarr;</span>
+        <span class="ladder-next__title" data-pt="AppSec Nightmare" data-en="AppSec Nightmare">AppSec Nightmare</span>
+        <span class="ladder-next__reason" data-pt="Você já sabe que dói. Três dias de autópsia, confronto e correção no seu pipeline." data-en="You know it hurts. Three days of autopsy, confrontation and fixes in your pipeline.">You know it hurts. Three days of autopsy, confrontation and fixes in your pipeline.</span>
+        <span class="ladder-next__go" data-pt="Ver a intervenção →" data-en="See the intervention →">See the intervention →</span>
       </a>
     </div>
   </div>
@@ -327,11 +327,15 @@
 </style>
 
 <script>
-  document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('.ladder-next__card');
-    if(!a||!window.gtag)return;
-    gtag('event','ladder_click',{from_step:a.getAttribute('data-ladder-from'),to_step:a.getAttribute('data-ladder-to'),link_url:a.href,source_page:location.pathname});
-  });
+(function(){
+  var root=document.documentElement;
+  function apply(){var pt=(root.getAttribute('lang')||'').toLowerCase().indexOf('pt')===0;
+    document.querySelectorAll('.ladder-next [data-pt][data-en]').forEach(function(el){el.textContent=pt?el.getAttribute('data-pt'):el.getAttribute('data-en');});}
+  apply();
+  try{new MutationObserver(apply).observe(root,{attributes:true,attributeFilter:['lang']});}catch(e){}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.ladder-next__card');if(!a||!window.gtag)return;
+    gtag('event','ladder_click',{from_step:a.getAttribute('data-ladder-from'),to_step:a.getAttribute('data-ladder-to'),link_url:a.href,source_page:location.pathname});});
+})();
 </script>
 
 <footer class="full">
