@@ -67,7 +67,24 @@
     <meta name="twitter:description" content="YOUR APPSEC SUCKS! A public challenge about Application Security. Bring it to your company or your event." />
     <meta name="twitter:image" content="https://cassiodeveloper.com.br/yass/img/logo/logo2.png" />
     <meta name="twitter:image:alt" content="YASS, Your AppSec Sucks!" />
-  </head>
+    <!-- Google Analytics 4 (propriedade compartilhada cassiodeveloper.com.br) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NL5R9VPGV9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NL5R9VPGV9');
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="calendar.app.google"]');
+      if(!a) return;
+      gtag('event', 'book_click', {
+        link_url: a.href,
+        link_text: (a.textContent||'').replace(/\s+/g,' ').trim().slice(0,80),
+        source_page: location.pathname
+      });
+    });
+  </script>
+</head>
 <body>
   <div class="topbar full">
     <div class="row">
